@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sản phẩm</title>
+    <title>Giỏ hàng</title>
     <link rel="stylesheet" href="assects/css/giohang.css">
     <link rel="stylesheet" href="assects/css/grid.css">
     <link rel="stylesheet" href="assects/css/responsive.css">

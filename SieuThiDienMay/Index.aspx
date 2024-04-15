@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Siêu thị điện máy</title>
+    <title>Điện máy giá rẻ</title>
     <link rel="stylesheet" href="assects/css/style.css" />
     <link rel="stylesheet" href="assects/css/grid.css" />
     <link rel="stylesheet" href="assects/css/responsive.css" />
@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="search-btn">
-                               <a href="GioHang.aspx"> <i class="search-icon ti-shopping-cart"></i></a>
+                                <a href="GioHang.aspx"><i class="search-icon ti-shopping-cart"></i></a>
                             </div>
 
                             <div id="mobile-menu" class="mobile-menu-btn">
@@ -87,22 +87,24 @@
                                 <ItemTemplate>
                                     <div class="col l-3 m-6 c-12">
                                         <div class="item">
-                                            <div class="image-item">
-                                                <img src='<%# Eval("url") %>' alt="">
-                                            </div>
-                                            <div class="body-item">
-                                                <h3 class="name-item"><%# Eval("tenSP") %></h3>
-                                                <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                <div class="btn-mua_ngay-area">
-                                                    <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                            <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
+                                                <div class="image-item">
+                                                    <img src='<%# Eval("url") %>' alt="">
                                                 </div>
-                                                <div class="btn-cart-area">
-                                                    <button class="btn-cart">
-                                                        Thêm vào giỏ hàng
-                                                         <i class="ti-shopping-cart"></i>
-                                                    </button>
+                                                <div class="body-item">
+                                                    <h3 class="name-item"><%# Eval("tenSP") %></h3>
+                                                    <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
+                                                    <div class="btn-mua_ngay-area">
+                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                    </div>
+                                                    <div class="btn-cart-area">
+                                                        <button class="btn-cart">
+                                                            Thêm vào giỏ hàng
+                                                             <i class="ti-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </ItemTemplate>
@@ -110,8 +112,7 @@
                             <div class="col l-12 m-12 c-12">
                                 <div class="all">
                                     <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
-                                    <a href="Tivi.aspx" id="btn-all">
-                                        Xem tất cả
+                                    <a href="Tivi.aspx" id="btn-all">Xem tất cả
                                     </a>
                                 </div>
                             </div>
@@ -132,182 +133,184 @@
                                 <ItemTemplate>
                                     <div class="col l-3 m-6 c-12">
                                         <div class="item">
-                                            <div class="image-item">
-                                                <img src='<%# Eval("url") %>' alt="">
-                                            </div>
-                                            <div class="body-item">
-                                                <h3 class="name-item"><%# Eval("tenSP") %></h3>
-                                                <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                <div class="btn-mua_ngay-area">
-                                                    <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                            <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
+                                                <div class="image-item">
+                                                    <img src='<%# Eval("url") %>' alt="">
                                                 </div>
-                                                <div class="btn-cart-area">
-                                                    <button class="btn-cart">
-                                                        Thêm vào giỏ hàng
-                                                   <i class="ti-shopping-cart"></i>
-                                                    </button>
+                                                <div class="body-item">
+                                                    <h3 class="name-item"><%# Eval("tenSP") %></h3>
+                                                    <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
+                                                    <div class="btn-mua_ngay-area">
+                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                    </div>
+                                                    <div class="btn-cart-area">
+                                                        <button class="btn-cart">
+                                                            Thêm vào giỏ hàng
+                                                         <i class="ti-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </ItemTemplate>
                             </asp:ListView>
-                             <div class="col l-12 m-12 c-12">
-                              <div class="all">
-                                  <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
-                                  <a href="TuLanh.aspx" id="btn-all">
-                                      Xem tất cả
-                                  </a>
-                              </div>
-                          </div>
+                            <div class="col l-12 m-12 c-12">
+                                <div class="all">
+                                    <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
+                                    <a href="TuLanh.aspx" id="btn-all">Xem tất cả
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                      <%-- Sản phẩm máy giặt--%>
-                  <div class="list-item" id="maygiat">
-                      <div class="row">
-                          <div class="heading-sub">
-                              Máy giặt thế hệ mới
-                          </div>
+                    <%-- Sản phẩm máy giặt--%>
+                    <div class="list-item" id="maygiat">
+                        <div class="row">
+                            <div class="heading-sub">
+                                Máy giặt thế hệ mới
+                            </div>
 
-                          <asp:ListView ID="dsMayGiat" runat="server">
-                              <ItemTemplate>
-                                  <div class="col l-3 m-6 c-12">
-                                      <div class="item">
-                                          <div class="image-item">
-                                              <img src='<%# Eval("url") %>' alt="">
-                                          </div>
-                                          <div class="body-item">
-                                              <h3 class="name-item"><%# Eval("tenSP") %></h3>
-                                              <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                              <div class="btn-mua_ngay-area">
-                                                  <input type="button" class="btn-mua_ngay" value="Mua ngay">
-                                              </div>
-                                              <div class="btn-cart-area">
-                                                  <button class="btn-cart">
-                                                      Thêm vào giỏ hàng
-                                                 <i class="ti-shopping-cart"></i>
-                                                  </button>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </ItemTemplate>
-                          </asp:ListView>
-                          <div class="col l-12 m-12 c-12">
-                          <div class="all">
-                              <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
-                              <a href="MayGiat.aspx" id="btn-all">
-                                  Xem tất cả
-                              </a>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                            <asp:ListView ID="dsMayGiat" runat="server">
+                                <ItemTemplate>
+                                    <div class="col l-3 m-6 c-12">
+                                        <div class="item">
+                                            <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
+                                                <div class="image-item">
+                                                    <img src='<%# Eval("url") %>' alt="">
+                                                </div>
+                                                <div class="body-item">
+                                                    <h3 class="name-item"><%# Eval("tenSP") %></h3>
+                                                    <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
+                                                    <div class="btn-mua_ngay-area">
+                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                    </div>
+                                                    <div class="btn-cart-area">
+                                                        <button class="btn-cart">
+                                                            Thêm vào giỏ hàng
+                             <i class="ti-shopping-cart"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:ListView>
+                            <div class="col l-12 m-12 c-12">
+                                <div class="all">
+                                    <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
+                                    <a href="MayGiat.aspx" id="btn-all">Xem tất cả
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div id="footer">
-            <div class="grid wide">
-                <div class="row  footer-content">
-                    <div class="col l-3 m-3 c-6">
-                       <div class="f-menu">
-                        <h4>Dịch vụ</h4>
-                           <ul>
-                            <li><a href="#">Dịch vụ vệ sinh</a></li>
-                            <li><a href="#">Dịch vụ sửa chữa</a></li>
-                            <li><a href="#">Dịch vụ giao hàng</a></li>
-                           </ul>
-                       </div>
+                <div class="grid wide">
+                    <div class="row  footer-content">
+                        <div class="col l-3 m-3 c-6">
+                            <div class="f-menu">
+                                <h4>Dịch vụ</h4>
+                                <ul>
+                                    <li><a href="#">Dịch vụ vệ sinh</a></li>
+                                    <li><a href="#">Dịch vụ sửa chữa</a></li>
+                                    <li><a href="#">Dịch vụ giao hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col l-3 m-3 c-6">
+                            <div class="f-menu">
+                                <ul>
+                                    <h4>Về điện máy giá rẻ</h4>
+                                    <li><a href="#">Giới thiệu về chúng tôi</a></li>
+                                    <li><a href="#">Tuyển dụng</a></li>
+                                    <li><a href="#">Góp ý</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col l-3 m-3 c-6">
+                            <div class="f-menu">
+                                <ul>
+                                    <h4>Liên hệ</h4>
+                                    <li><a href="#">Gọi mua: 0123456789</a></li>
+                                    <li><a href="#">Khiếu nại: 0987654321</a></li>
+                                    <li><a href="#">Bảo hành: 0912873465</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col l-3 m-3 c-6">
+                            <div class="f-menu">
+                                <ul>
+                                    <h4>Mạng xã hội</h4>
+                                    <li><a href="#">
+                                        <i class="ti-facebook"></i>
+                                        Fanpage: Điện máy giá rẻ
+                                
+                                    </a></li>
+                                    <li><a href="#">
+                                        <i class="ti-youtube"></i>
+                                        Youtube: DienMayGiaRe
+                                    </a></li>
+                                    <li><a href="#">
+                                        <i class="ti-twitter-alt"></i>
+                                        Tiwtter: Điện máy giá rẻ
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col l-12 m-12 c-12">
+                            <div class="powered">
+                                <h4>Made with ❤️ Powered by QuanDEV</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal js-modal">
+                <div class="modal-container js-modal-container">
+                    <div class="modal-close js-modal-close">
+                        <i class="ti-close"></i>
+                    </div>
+                    <header class="modal-header">
+                        <i class="modal-heading-icon ti-briefcase"></i>
+                        Tickets
+                    </header>
+
+                    <div class="modal-body">
+                        <label for="ticket-quantity" class="modal-label">
+                            <i class="ti-shopping-cart"></i>
+                            Tickets, $15 per person
+                        </label>
+                        <input type="text" id="ticket-quantity" class="modal-input" placeholder="How many ?" />
+
+                        <label for="ticket-email" class="modal-label">
+                            <i class="ti-user"></i>
+                            Send to
+                        </label>
+                        <input type="email" id="ticket-email" class="modal-input" placeholder="Enter email..." />
+
+                        <button id="buy-tickets">
+                            PAY
+                    <i class="ti-check"></i>
+                        </button>
                     </div>
 
-                     <div class="col l-3 m-3 c-6">
-                        <div class="f-menu">
-                            <ul>
-                                <h4>Về điện máy giá rẻ</h4>
-                             <li><a href="#">Giới thiệu về chúng tôi</a></li>
-                             <li><a href="#">Tuyển dụng</a></li>
-                             <li><a href="#">Góp ý</a></li>
-                            </ul>
-                        </div>
-                     </div>
-
-                     <div class="col l-3 m-3 c-6">
-                        <div class="f-menu">
-                            <ul>
-                                <h4>Liên hệ</h4>
-                             <li><a href="#">Gọi mua: 0123456789</a></li>
-                             <li><a href="#">Khiếu nại: 0987654321</a></li>
-                             <li><a href="#">Bảo hành: 0912873465</a></li>
-                            </ul>
-                        </div>
-                     </div>
-
-                     <div class="col l-3 m-3 c-6">
-                        <div class="f-menu">
-                            <ul>
-                                <h4>Mạng xã hội</h4>
-                             <li><a href="#">
-                                <i class="ti-facebook"></i>
-                                Fanpage: Điện máy giá rẻ
-                                
-                            </a></li>
-                             <li><a href="#">
-                                <i class="ti-youtube"></i>
-                                Youtube: DienMayGiaRe
-                            </a></li>
-                             <li><a href="#">
-                                <i class="ti-twitter-alt"></i>
-                                Tiwtter: Điện máy giá rẻ
-                            </a></li>
-                            </ul>
-                        </div>
-                     </div>
-
-                     <div class="col l-12 m-12 c-12">
-                        <div class="powered">
-                            <h4>Made with ❤️ Powered by QuanDEV</h4>
-                        </div>
-                     </div>
+                    <footer class="modal-footer">
+                        <p class="modal-help">Need <a href="#">help?</a></p>
+                    </footer>
                 </div>
             </div>
         </div>
-
-                <div class="modal js-modal">
-                    <div class="modal-container js-modal-container">
-                        <div class="modal-close js-modal-close">
-                            <i class="ti-close"></i>
-                        </div>
-                        <header class="modal-header">
-                            <i class="modal-heading-icon ti-briefcase"></i>
-                            Tickets
-                        </header>
-
-                        <div class="modal-body">
-                            <label for="ticket-quantity" class="modal-label">
-                                <i class="ti-shopping-cart"></i>
-                                Tickets, $15 per person
-                            </label>
-                            <input type="text" id="ticket-quantity" class="modal-input" placeholder="How many ?" />
-
-                            <label for="ticket-email" class="modal-label">
-                                <i class="ti-user"></i>
-                                Send to
-                            </label>
-                            <input type="email" id="ticket-email" class="modal-input" placeholder="Enter email..." />
-
-                            <button id="buy-tickets">
-                                PAY
-                    <i class="ti-check"></i>
-                            </button>
-                        </div>
-
-                        <footer class="modal-footer">
-                            <p class="modal-help">Need <a href="#">help?</a></p>
-                        </footer>
-                    </div>
-                </div>
-            </div>
     </form>
 </body>
 

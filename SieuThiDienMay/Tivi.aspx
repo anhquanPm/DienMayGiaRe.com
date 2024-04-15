@@ -6,7 +6,7 @@
 <head runat="server">
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title/>Tivi</title/>
+    <title>Điện máy giá rẻ - Tivi</title>
     <link rel="stylesheet" href="   assects/css/sanpham.css"/>
     <link rel="stylesheet" href="   assects/css/grid.css"/>
     <link rel="stylesheet" href="   assects/css/responsive.css"/>
@@ -81,6 +81,7 @@
                                     <ItemTemplate>
                                         <div class="col l-3 m-6 c-12">
                                             <div class="item">
+                                                <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
                                                 <div class="image-item">
                                                     <img src='<%# Eval("url") %>' alt="">
                                                 </div>
@@ -97,6 +98,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
+                                                  </a>
                                             </div>
                                         </div>
                                     </ItemTemplate>

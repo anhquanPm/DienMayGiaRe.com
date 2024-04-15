@@ -9,7 +9,7 @@ namespace SieuThiDienMay
     {
         private int id;
         private string tenSP;
-        private float giaSP;
+        private decimal giaSP;
         private string url;
         private int type;
 
@@ -18,7 +18,7 @@ namespace SieuThiDienMay
            
         }
 
-        public SanPham(int id, string tenSP, float giaSP, string url , int type)
+        public SanPham(int id, string tenSP, decimal giaSP, string url , int type)
         {
             this.Id = id;
             this.TenSP = tenSP;
@@ -29,7 +29,7 @@ namespace SieuThiDienMay
 
         public int Id { get => id; set => id = value; }
         public string TenSP { get => tenSP; set => tenSP = value; }
-        public float GiaSP { get => giaSP; set => giaSP = value; }
+        public decimal GiaSP { get => giaSP; set => giaSP = value; }
         public string Url { get => url; set => url = value; }
         public int Type { get => type; set => type = value; }   
     }
