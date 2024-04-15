@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangNhap.aspx.cs" Inherits="SieuThiDienMay.DangNhap" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangKi.aspx.cs" Inherits="SieuThiDienMay.DangKi" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="assects/css/dangnhap.css" />
+    <link rel="stylesheet" href="assects/css/dangki.css" />
     <link rel="stylesheet" href="assects/css/grid.css" />
     <link rel="stylesheet" href="assects/css/responsive.css" />
     <link rel="stylesheet" href="assects/font/themify-icons/themify-icons.css" />
@@ -42,26 +42,32 @@
             <div class="grid wide">
                 <div class="row">
                     <div class="col l-12 m-12 c-12">
-                        <form id="form1" runat="server" action="DangNhap.aspx" method="post" class="form-login">
-                            <h3>Đăng nhập</h3>
+                        <form class="form-register" id="form1" runat="server" action="DangKi.aspx" method="post">
+                            <h3>Đăng ký</h3>
                             <span class="message-login" style="color: red;" runat="server" id="errorLogin"></span>
-                            <div class="col l-12 m-12 c-12">
-                                <input type="text" name="user-name" required id="user-name" placeholder="Tài khoản" class="user-name" autocomplete="off">
+                            <div class="col l-12 m-12 c-12"> 
+                                <input type="text" name="fullname" required id="fullname" placeholder="Họ và tên" class="full-name" autocomplete="off">
                             </div>
+                             <div class="col l-12 m-12 c-12">
+                             <input type="text" name="username" required id="username" placeholder="Tài khoản" class="user-name" autocomplete="off">
+                         </div>
                             <div class="col l-12 m-12 c-12">
                                 <input type="password" name="password" required id="password" placeholder="Mật khẩu" class="password" autocomplete="off">
                             </div>
                             <div class="col l-12 m-12 c-12">
-                                <button class="btn-login">Đăng nhập</button>
+                                <input type="password" name="repassword" required id="repassword" placeholder="Nhập lại mật khẩu" class="confirm-password" autocomplete="off">
                             </div>
-                             <div class="col l-12 m-12 c-12">
-                                <p style="text-align: center; margin-top: 10px; color: #666;">Bạn chưa có tài khoản? <a href="DangKi.aspx">Đăng ký ngay</a></p>
+                            <div class="col l-12 m-12 c-12">
+                               <button class="btn-register" runat="server">Đăng ký</button>
+                            </div>
+                            <div class="col l-12 m-12 c-12">
+                                <p style="text-align: center; margin-top: 10px; color: #666;">Đã có tài khoản? <a href="DangNhap.aspx">Đăng nhập ngay</a></p>
                             </div>
                         </form>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
         <div id="footer">
             <div class="grid wide">
@@ -128,6 +134,6 @@
                 </div>
             </div>
         </div>
-
+        </div>
 </body>
 </html>

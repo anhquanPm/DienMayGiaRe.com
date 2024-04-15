@@ -14,8 +14,8 @@ namespace SieuThiDienMay
         protected void Application_Start(object sender, EventArgs e)
         {
             List<User> listUser = new List<User>();
-            listUser.Add(new User("1", "Trần Anh Quân" ,"quan", "quan"));
-            listUser.Add(new User("2", "Trần Ánh Dương", "duong", "duong"));
+            listUser.Add(new User( "Trần Anh Quân" ,"quan", "quan"));
+            listUser.Add(new User( "Trần Ánh Dương", "duong", "duong"));
 
             Application["listUser"] = listUser;
 
@@ -24,7 +24,7 @@ namespace SieuThiDienMay
             listSanPham.Add(new SanPham(1, "Google Tivi TCL 4K 65 inch", 9900000, "assects/img/tivi1.jpg", 1));
             listSanPham.Add(new SanPham(2, "Smart Tivi Samsung 4K 65 inch", 12000000, "assects/img/tivi2.png", 1)); 
             listSanPham.Add(new SanPham(3, "Smart Tivi Toshiba 4K 55 inch ", 8700000, "assects/img/tivi3.jpg", 1));
-            listSanPham.Add(new SanPham(4, "Smart Tivi LG 4K 55 inch", 15000000, "assects/img/tivi4.jpg", 1));
+            listSanPham.Add(new SanPham(4, "Smart Tivi LG 4K OLED 55 inch", 15000000, "assects/img/tivi4.jpg", 1));
 
             // tủ lạnh type = 2
             listSanPham.Add(new SanPham(5, "Casper Inverter 458 lít", 9490000, "assects/img/tulanh.jpg", 2));

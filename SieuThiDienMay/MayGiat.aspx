@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="search-btn">
-                            <i class="search-icon ti-shopping-cart"></i>
+                             <a href="GioHang.aspx"> <i class="search-icon ti-shopping-cart"></i></a>
                         </div>
 
                         <div id="mobile-menu" class="mobile-menu-btn">
@@ -88,7 +88,7 @@
                                                     <h3 class="name-item"><%# Eval("tenSP") %></h3>
                                                     <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
                                                     <div class="btn-mua_ngay-area">
-                                                        <input type="button" class="btn-mua_ngay" value="Chốt đơn luôn">
+                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
                                                     </div>
                                                     <div class="btn-cart-area">
                                                         <button class="btn-cart">

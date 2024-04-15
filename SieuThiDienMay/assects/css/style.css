@@ -253,11 +253,12 @@ html {
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid #e0e0e0;
-    color: #333;
+    color: #000;
     display: block;
-    line-height: 15px;
+    line-height: 46px;
     margin: 15px auto 5px;
     text-align: center;
+    text-decoration: none;
     width: 340px;
     height: 48px;
 }

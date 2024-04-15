@@ -1,20 +1,59 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tivi.aspx.cs" Inherits="SieuThiDienMay.SanPham1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GioHang.aspx.cs" Inherits="SieuThiDienMay.GioHang" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title/>Tivi</title/>
-    <link rel="stylesheet" href="   assects/css/sanpham.css"/>
-    <link rel="stylesheet" href="   assects/css/grid.css"/>
-    <link rel="stylesheet" href="   assects/css/responsive.css"/>
-    <link rel="stylesheet" href="   assects/font/themify-icons/themify-icons.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="assects/css/giohang.css">
+    <link rel="stylesheet" href="assects/css/grid.css">
+    <link rel="stylesheet" href="assects/css/responsive.css">
+    <link rel="stylesheet" href="assects/font/themify-icons/themify-icons.css">
+    <style>
+td {
+     padding: 0;
+ }
+ .th1 {
+     width: 50%;
+ }
+ .th2 {
+     width: 15%;
+ }
+ .th3 {
+     width: 10%;
+ }
+ .th4 {
+     width: 15%;
+ }
+ .th5 {
+     width: 10%;
+ }
+ .tdXoa {
+     background-color: #ff5252;
+     color: white;
+     width: 50px;
+     border-radius: 2px;
+     border: none;
+     padding: 5px 10px;
+     text-decoration: none;
+ }
+
+ .formatCost {
+     color: var(--primary-color);
+ }
+ .formatCost:after {content:'đ'}
+
+ .tdXoa:hover {
+     cursor: pointer;
+     opacity: 0.7;
+ }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="main">
+       <div id="main">
         <div id="header">
 
             <div class="grid wide">
@@ -25,25 +64,21 @@
                                     <i class="ti-home"></i>
                                     Trang chủ
                                 </a></li>
-                            <li style="background-color:#fff"><a href="Tivi.aspx" style="color:#000">Tivi</a></li>
+                            <li><a href="Tivi.aspx">Tivi</a></li>
                             <li><a href="TuLanh.aspx">Tủ lạnh</a></li>
                             <li><a href="MayGiat.aspx">Máy giặt</a></li>   
                             <li id="dangNhap" runat="server"><a href="DangNhap.aspx">Tài khoản
                                 <i class="ti-user"></i>
                              </a>
-                             </li>  
-                             <li id="dangXuat" runat="server" style="display: none"><a href="DangXuat.aspx">Đăng xuất
-                              <i class="ti-shift-right"></i>
-                             </a></li>
+                             </li>                       
                         </ul>
-                         <span id="userInfor" runat="server"></span>
                         <div class="form-search">
                             <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?"
                                 autocomplete="off">
                         </div>
 
                         <div class="search-btn">
-                             <a href="GioHang.aspx"> <i class="search-icon ti-shopping-cart"></i></a>
+                            <i class="search-icon ti-shopping-cart"></i>
                         </div>
 
                         <div id="mobile-menu" class="mobile-menu-btn">
@@ -55,58 +90,62 @@
             </div>
         </div>
 
-        <div id="content">
-            <!-- Begin Slider -->
+        <div class="app__container">
             <div class="grid wide">
-                <div class="row">
-                    <div class="col l-12 m-12 c-12">
-                        <div class="slider">
-                            <img src="assects/img/siler.png" alt="">
-                        </div>
+
+                 <!-- Empty cart: header__cart-list--empty -->
+                <div class="empty-cart" id="emtyCart" runat="server">
+                    <div style="text-align:center; padding-top: 50px;">
+                        <img class="empty-cart-img" src="./assets/img/empty_cart.png" />
+                    </div>
+                    <div style="text-align:center; font-size:2rem; padding-top:30px; color:#ff5252;">Chưa có sản phẩm</div>
+                </div>
+
+
+                <div class="giohang-mota" id="emtyCart1" runat="server">
+                    <span class="heading-cart-list">DANH SÁCH SẢN PHẨM ĐÃ CHỌN</span>
+                </div>
+                <div class="col l-12 m-12 c-12" id="emtyCart2" runat="server">
+                    <div class="table-cart-list" id="idProductAdd" runat="server">
+                        <table class="table-giohang">
+                            <tr>
+                               <th class="th1">Sản phẩm</th>
+                               <th class="th2">Đơn giá</th>
+                               <th class="th3">Số lượng</th>
+                               <th class="th4">Thành tiền</th>
+                               <th class="th5"></th>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="div-img-name">
+                                        <div class="div-img-name-img">
+                                            <img src="assects/img/maygiat1.jpg" style="max-width:100px;"/>
+                                        </div>
+                                        <div style="text-align:left;">Máy giặt</div>
+                                    </div>
+                                </td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>
+                                    <button class="tdXoa">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td style="font-size:1.6rem; font-weight:bold">Tổng tiền:</td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-            </div>
-            <!-- End Slider -->
-
-            <div class="grid wide">
-                <div class="row">
-                     <div class="list-item" id="tivi">
-                            <div class="row">
-
-                                <div class="heading-sub">
-                                    Danh sác sản phầm
-                                </div>
-
-                                <asp:ListView ID="dsSP" runat="server">
-                                    <ItemTemplate>
-                                        <div class="col l-3 m-6 c-12">
-                                            <div class="item">
-                                                <div class="image-item">
-                                                    <img src='<%# Eval("url") %>' alt="">
-                                                </div>
-                                                <div class="body-item">
-                                                    <h3 class="name-item"><%# Eval("tenSP") %></h3>
-                                                    <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                    <div class="btn-mua_ngay-area">
-                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
-                                                    </div>
-                                                    <div class="btn-cart-area">
-                                                        <button class="btn-cart">
-                                                            Thêm vào giỏ hàng
-                                                             <i class="ti-shopping-cart"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:ListView>
-                            </div>
-                        </div>
+                <div class="giohang-mota" id="emtyCart3" runat="server">
+                    <input id="input-thanhtoan" class="input-thanhtoan" type="button" value="Thanh toán"/>
                 </div>
             </div>
-
-                
+        </div>
 
         <div id="footer">
             <div class="grid wide">
@@ -173,6 +212,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
     </form>
 </body>

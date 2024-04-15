@@ -1,20 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tivi.aspx.cs" Inherits="SieuThiDienMay.SanPham1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChiTietSanPham.aspx.cs" Inherits="SieuThiDienMay.ChiTietSanPham" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title/>Tivi</title/>
-    <link rel="stylesheet" href="   assects/css/sanpham.css"/>
-    <link rel="stylesheet" href="   assects/css/grid.css"/>
-    <link rel="stylesheet" href="   assects/css/responsive.css"/>
-    <link rel="stylesheet" href="   assects/font/themify-icons/themify-icons.css"/>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="assects/css/chitietsanpham.css">
+    <link rel="stylesheet" href="assects/css/grid.css">
+    <link rel="stylesheet" href="assects/css/responsive.css">
+    <link rel="stylesheet" href="assects/font/themify-icons/themify-icons.css">
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="main">
+       <div id="main">
         <div id="header">
 
             <div class="grid wide">
@@ -25,18 +25,14 @@
                                     <i class="ti-home"></i>
                                     Trang chủ
                                 </a></li>
-                            <li style="background-color:#fff"><a href="Tivi.aspx" style="color:#000">Tivi</a></li>
+                            <li><a href="Tivi.aspx">Tivi</a></li>
                             <li><a href="TuLanh.aspx">Tủ lạnh</a></li>
                             <li><a href="MayGiat.aspx">Máy giặt</a></li>   
                             <li id="dangNhap" runat="server"><a href="DangNhap.aspx">Tài khoản
                                 <i class="ti-user"></i>
                              </a>
-                             </li>  
-                             <li id="dangXuat" runat="server" style="display: none"><a href="DangXuat.aspx">Đăng xuất
-                              <i class="ti-shift-right"></i>
-                             </a></li>
+                             </li>                       
                         </ul>
-                         <span id="userInfor" runat="server"></span>
                         <div class="form-search">
                             <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?"
                                 autocomplete="off">
@@ -55,58 +51,71 @@
             </div>
         </div>
 
-        <div id="content">
-            <!-- Begin Slider -->
+        <div id="main-content">
             <div class="grid wide">
-                <div class="row">
-                    <div class="col l-12 m-12 c-12">
-                        <div class="slider">
-                            <img src="assects/img/siler.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Slider -->
-
-            <div class="grid wide">
-                <div class="row">
-                     <div class="list-item" id="tivi">
-                            <div class="row">
-
-                                <div class="heading-sub">
-                                    Danh sác sản phầm
-                                </div>
-
-                                <asp:ListView ID="dsSP" runat="server">
-                                    <ItemTemplate>
-                                        <div class="col l-3 m-6 c-12">
-                                            <div class="item">
-                                                <div class="image-item">
-                                                    <img src='<%# Eval("url") %>' alt="">
-                                                </div>
-                                                <div class="body-item">
-                                                    <h3 class="name-item"><%# Eval("tenSP") %></h3>
-                                                    <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                    <div class="btn-mua_ngay-area">
-                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
-                                                    </div>
-                                                    <div class="btn-cart-area">
-                                                        <button class="btn-cart">
-                                                            Thêm vào giỏ hàng
-                                                             <i class="ti-shopping-cart"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:ListView>
+                <div class="content">
+                    <div class="row">
+                        <div class="col l-5 m-12 c-12">
+                            <div class="content-img">
+                                <img src="assects/img/maygiat.jpg" alt="">
                             </div>
                         </div>
-                </div>
-            </div>
+     
+                        <div class="col l-7 m-12 c-12">
+                            <div class="content-info">
+                                <div class="head-content">
+                                    <h3>Thông tin sản phẩm</h3>
+                                </div>
 
+                                <div class="body-content">
+                                    <div class="row">
+                                        <div class="col l-4 m-6 c-6">
+                                            <ul class="info-ques"> 
+                                                <li>Ten san pham : </li>
+                                                <li>Xuat Xu : </li>
+                                                <li>Van chuyen : </li>
+                                                <li>Gia ban : </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col l-8 m-6 c-6">
+                                            <ul class="info-des">
+                                                <li>May giat</li>
+                                                <li>Viet Nam</li>
+                                                <li>Mien phi van chuyen</li>
+                                                <li>120000 VND</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="footer-content">
+                                    <div class="row">
+                                        <div class="col l-6 m-6 c-12">
+                                            <div class="btn-mua_ngay-area">
+                                                <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                            </div>
+                                        </div>
+
+                                        <div class="col l-6 m-6 c-12">
+                                            <div class="btn-cart-area">
+                                                <button class="btn-cart">
+                                                    Thêm vào giỏ hàng
+                                                    <i class="ti-shopping-cart"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
                 
+            </div>
+        </div>
 
         <div id="footer">
             <div class="grid wide">
@@ -173,6 +182,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
     </form>
 </body>

@@ -147,109 +147,24 @@ html {
 
 
 
-/* Định dạng toàn bộ form */
-.form-login {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    /* border-radius: 8px; */
-    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
-    padding-top: 200px;
+.form-register {
+    padding-top: 100px;
 }
 
-    /* Định dạng văn bản "Bạn chưa có tài khoản? Đăng ký ngay!" */
-    .form-login p {
+    /* Định dạng tiêu đề "Đăng ký" */
+    .form-register h3 {
         text-align: center;
-        margin-top: 10px;
-        color: #666; /* Màu chữ */
-        font-size: 14px; /* Cỡ chữ */
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        /* Màu sắc tiêu đề */
     }
 
-    /* Định dạng liên kết "Đăng ký ngay" */
-    .form-login a {
-        color: #007bff; /* Màu chữ khi chưa hover */
-        text-decoration: none;
-        transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu chữ */
-    }
-
-        /* Định dạng liên kết "Đăng ký ngay" khi di chuột qua */
-        .form-login a:hover {
-            color: #0056b3; /* Màu chữ khi hover */
-        }
-
-
-/* Định dạng tiêu đề "Đăng nhập" */
-h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Định dạng input tài khoản và mật khẩu */
+/* Định dạng input họ và tên, email, mật khẩu và xác nhận mật khẩu */
+.full-name,
 .user-name,
-.password {
-    margin-bottom: 15px;
-}
-
-.user-name,
-.password {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    /* border: 1px solid #ccc; */
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-/* Định dạng nút "Đăng nhập" */
-.content-login {
-    text-align: center;
-}
-
-    .content-login input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: #007bff;
-        /* Màu nút */
-        color: #fff;
-        /* Màu chữ */
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        /* Hiệu ứng chuyển đổi màu nền */
-    }
-
-h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333; /* Thay đổi màu sắc tiêu đề */
-}
-
-
-.btn-login {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: 1px solid #0073ff;
-    border-radius: 4px;
-    font-size: 15px;
-    color: #fff;
-    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
-}
-
-    .btn-login:hover {
-        background-color: #0056b3; /* Thay đổi màu nền khi di chuột qua */
-        border: 1px solid #0056b3; /* Thay đổi màu viền khi di chuột qua */
-        color: #fff;
-        cursor: pointer;
-    }
-
-
-.user-name,
-.password {
+.password,
+.confirm-password {
     margin-bottom: 15px;
     width: 100%;
     padding: 10px;
@@ -257,8 +172,60 @@ h3 {
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-size: 16px;
-    background-color: #f8f8f8; /* Thêm màu nền */
+    background-color: #f8f8f8;
+    /* Màu nền */
 }
+
+/* Định dạng nút "Đăng ký" */
+.btn-register {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    /* Màu nền */
+    border: 1px solid #28a745;
+    /* Màu viền */
+    border-radius: 4px;
+    font-size: 15px;
+    color: #fff;
+    /* Màu chữ */
+    transition: all 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu nền */
+}
+
+    .btn-register:hover {
+        background-color: #218838;
+        /* Màu nền khi di chuột qua */
+        border: 1px solid #218838;
+        /* Màu viền khi di chuột qua */
+        color: #fff;
+        cursor: pointer;
+    }
+
+/* Định dạng văn bản "Đã có tài khoản? Đăng nhập ngay" */
+.form-register p {
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+    /* Màu chữ */
+    font-size: 14px;
+    /* Cỡ chữ */
+}
+
+/* Định dạng liên kết "Đăng nhập ngay" */
+.form-register a {
+    color: #007bff;
+    /* Màu chữ khi chưa hover */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu chữ */
+}
+
+    /* Định dạng liên kết "Đăng nhập ngay" khi di chuột qua */
+    .form-register a:hover {
+        color: #0056b3;
+        /* Màu chữ khi hover */
+    }
+
 
 
 
