@@ -74,7 +74,7 @@
                             <div class="row">
 
                                 <div class="heading-sub">
-                                    Danh sác sản phầm
+                                    Danh sách sản phẩm tủ lạnh
                                 </div>
 
                                 <asp:ListView ID="dsSP" runat="server">
@@ -88,8 +88,10 @@
                                                 <div class="body-item">
                                                     <h3 class="name-item"><%# Eval("tenSP") %></h3>
                                                     <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                    <div class="btn-mua_ngay-area">
-                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                       <div class="btn-mua_ngay-area">
+                                                        <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
+                                                            <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                        </a>
                                                     </div>
                                                     <div class="btn-cart-area">
                                                         <button class="btn-cart">

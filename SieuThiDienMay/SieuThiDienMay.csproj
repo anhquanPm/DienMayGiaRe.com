@@ -434,6 +434,7 @@
     <Content Include="assects\font\themify-icons\SVG\zoom-in.svg" />
     <Content Include="assects\font\themify-icons\SVG\zoom-out.svg" />
     <Content Include="assects\font\themify-icons\themify-icons.css" />
+    <Content Include="assects\img\empty_cart.png" />
     <Content Include="assects\img\f8-icon.18cd71cfcfa33566a22b.png" />
     <Content Include="assects\img\maygiat.jpg" />
     <Content Include="assects\img\maygiat1.jpg" />
@@ -460,9 +461,14 @@
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="MayGiat.aspx" />
+    <Content Include="MuaHang.aspx" />
+    <Content Include="MuaNgay.aspx" />
+    <Content Include="ThanhToan.aspx" />
+    <Content Include="ThemVaoGioHang.aspx" />
     <Content Include="Tivi.aspx" />
     <Content Include="TuLanh.aspx" />
     <Content Include="Web.config" />
+    <Content Include="XoaSanPham.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietSanPham.aspx.cs">
@@ -517,7 +523,35 @@
     <Compile Include="MayGiat.aspx.designer.cs">
       <DependentUpon>MayGiat.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MuaHang.aspx.cs">
+      <DependentUpon>MuaHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MuaHang.aspx.designer.cs">
+      <DependentUpon>MuaHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MuaNgay.aspx.cs">
+      <DependentUpon>MuaNgay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MuaNgay.aspx.designer.cs">
+      <DependentUpon>MuaNgay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThanhToan.aspx.cs">
+      <DependentUpon>ThanhToan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThanhToan.aspx.designer.cs">
+      <DependentUpon>ThanhToan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThemVaoGioHang.aspx.cs">
+      <DependentUpon>ThemVaoGioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThemVaoGioHang.aspx.designer.cs">
+      <DependentUpon>ThemVaoGioHang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tivi.aspx.cs">
       <DependentUpon>Tivi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -534,6 +568,14 @@
       <DependentUpon>TuLanh.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserProducts.cs" />
+    <Compile Include="XoaSanPham.aspx.cs">
+      <DependentUpon>XoaSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XoaSanPham.aspx.designer.cs">
+      <DependentUpon>XoaSanPham.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assects\font\themify-icons\fonts\themify.eot" />

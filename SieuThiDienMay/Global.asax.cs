@@ -10,10 +10,10 @@ namespace SieuThiDienMay
 {
     public class Global : System.Web.HttpApplication
     {
-       
         protected void Application_Start(object sender, EventArgs e)
         {
             List<User> listUser = new List<User>();
+           
             listUser.Add(new User( "Trần Anh Quân" ,"quan", "quan"));
             listUser.Add(new User( "Trần Ánh Dương", "duong", "duong"));
 
@@ -40,6 +40,9 @@ namespace SieuThiDienMay
             listSanPham.Add(new SanPham(12, "Panasonic 8.2 kg", 6000000, "assects/img/maygiat4.jpg", 3));
 
             Application["listSanPham"] = listSanPham;
+
+            List<UserProducts> gioHang = new List<UserProducts>();
+            Application["giohang"] = gioHang;
         }
 
         protected void Session_Start(object sender, EventArgs e)

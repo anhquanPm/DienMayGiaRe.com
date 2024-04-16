@@ -70,8 +70,12 @@ td {
                             <li id="dangNhap" runat="server"><a href="DangNhap.aspx">Tài khoản
                                 <i class="ti-user"></i>
                              </a>
-                             </li>                       
+                             </li>  
+                             <li id="dangXuat" runat="server" style="display: none"><a href="DangXuat.aspx">Đăng xuất
+                              <i class="ti-shift-right"></i>
+                             </a></li>
                         </ul>
+                         <span id="userInfor" runat="server" style="color:#fff; font-size: 15px"></span>
                         <div class="form-search">
                             <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?"
                                 autocomplete="off">
@@ -96,18 +100,18 @@ td {
                  <!-- Empty cart: header__cart-list--empty -->
                 <div class="empty-cart" id="emtyCart" runat="server">
                     <div style="text-align:center; padding-top: 50px;">
-                        <img class="empty-cart-img" src="./assets/img/empty_cart.png" />
+                        <img class="empty-cart-img" src="assects/img/empty_cart.png" />
                     </div>
                     <div style="text-align:center; font-size:2rem; padding-top:30px; color:#ff5252;">Chưa có sản phẩm</div>
                 </div>
 
 
                 <div class="giohang-mota" id="emtyCart1" runat="server">
-                    <span class="heading-cart-list">DANH SÁCH SẢN PHẨM ĐÃ CHỌN</span>
+                    <span class="heading-cart-list">Danh sách sản phẩm mà bạn đã chọn</span>
                 </div>
                 <div class="col l-12 m-12 c-12" id="emtyCart2" runat="server">
                     <div class="table-cart-list" id="idProductAdd" runat="server">
-                        <table class="table-giohang">
+                        <%--<table class="table-giohang">
                             <tr>
                                <th class="th1">Sản phẩm</th>
                                <th class="th2">Đơn giá</th>
@@ -138,11 +142,11 @@ td {
                                 <td style="font-size:1.6rem; font-weight:bold">Tổng tiền:</td>
                                 <td></td>
                             </tr>
-                        </table>
+                        </table>--%>
                     </div>
                 </div>
                 <div class="giohang-mota" id="emtyCart3" runat="server">
-                    <input id="input-thanhtoan" class="input-thanhtoan" type="button" value="Thanh toán"/>
+                    <a href="ThanhToan.aspx"><input id="input-thanhtoan" name="input-thanhtoan"  class="input-thanhtoan" type="button" value="Thanh toán"/></a>
                 </div>
             </div>
         </div>

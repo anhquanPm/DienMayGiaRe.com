@@ -99,20 +99,21 @@
                                             <div class="footer-content">
                                                 <div class="row">
                                                     <div class="col l-6 m-6 c-12">
-                                                        <div class="btn-mua_ngay-area">
-                                                            <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                            <div class="btn-mua_ngay-area">
+                                                            <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
+                                                                <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                            </a>
                                                         </div>
                                                     </div>
 
                                                     <div class="col l-6 m-6 c-12">
                                                         <div class="btn-cart-area">
-                                                            <button class="btn-cart">
-                                                                Thêm vào giỏ hàng
-                            <i class="ti-shopping-cart"></i>
-                                                            </button>
+                                                            
+                                                                <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>">
+                                                                     <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
+                                                                </a>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -191,8 +192,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </form>
 </body>

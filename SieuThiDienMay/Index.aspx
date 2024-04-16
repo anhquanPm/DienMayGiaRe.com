@@ -95,13 +95,14 @@
                                                     <h3 class="name-item"><%# Eval("tenSP") %></h3>
                                                     <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
                                                     <div class="btn-mua_ngay-area">
-                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                        <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
+                                                            <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                        </a>
                                                     </div>
                                                     <div class="btn-cart-area">
-                                                        <button class="btn-cart">
-                                                            Thêm vào giỏ hàng
-                                                             <i class="ti-shopping-cart"></i>
-                                                        </button>
+                                                        <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>" style="text-decoration:none">
+                                                         <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
+                                                     </a>
                                                     </div>
                                                 </div>
                                             </a>
@@ -140,14 +141,15 @@
                                                 <div class="body-item">
                                                     <h3 class="name-item"><%# Eval("tenSP") %></h3>
                                                     <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                    <div class="btn-mua_ngay-area">
-                                                        <input type="button" class="btn-mua_ngay" value="Mua ngay">
-                                                    </div>
+                                                     <div class="btn-mua_ngay-area">
+                                                         <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
+                                                             <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                         </a>
+                                                     </div>
                                                     <div class="btn-cart-area">
-                                                        <button class="btn-cart">
-                                                            Thêm vào giỏ hàng
-                                                         <i class="ti-shopping-cart"></i>
-                                                        </button>
+                                                          <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>" style="text-decoration:none">
+                                                            <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </a>
@@ -184,13 +186,14 @@
                                                     <h3 class="name-item"><%# Eval("tenSP") %></h3>
                                                     <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
                                                     <div class="btn-mua_ngay-area">
+                                                    <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
                                                         <input type="button" class="btn-mua_ngay" value="Mua ngay">
-                                                    </div>
+                                                    </a>
+                                                </div>
                                                     <div class="btn-cart-area">
-                                                        <button class="btn-cart">
-                                                            Thêm vào giỏ hàng
-                             <i class="ti-shopping-cart"></i>
-                                                        </button>
+                                                           <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>" style="text-decoration:none">
+                                                                <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
+                                                            </a>
                                                     </div>
                                                 </div>
                                             </a>
