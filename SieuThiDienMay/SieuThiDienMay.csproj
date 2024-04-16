@@ -453,6 +453,7 @@
     <Content Include="assects\img\tulanh3.jpg" />
     <Content Include="assects\img\tulanh4.jpg" />
     <Content Include="assects\img\vi-vn-smart-samsung-4k-65-inch-ua65au7002-1.jpg" />
+    <Content Include="CapNhatThongTin.aspx" />
     <Content Include="ChiTietSanPham.aspx" />
     <Content Include="DangKi.aspx" />
     <Content Include="DangNhap.aspx" />
@@ -465,12 +466,20 @@
     <Content Include="MuaNgay.aspx" />
     <Content Include="ThanhToan.aspx" />
     <Content Include="ThemVaoGioHang.aspx" />
+    <Content Include="ThongTinTaiKhoan.aspx" />
     <Content Include="Tivi.aspx" />
     <Content Include="TuLanh.aspx" />
     <Content Include="Web.config" />
     <Content Include="XoaSanPham.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatThongTin.aspx.cs">
+      <DependentUpon>CapNhatThongTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTin.aspx.designer.cs">
+      <DependentUpon>CapNhatThongTin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietSanPham.aspx.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -551,6 +560,13 @@
     </Compile>
     <Compile Include="ThemVaoGioHang.aspx.designer.cs">
       <DependentUpon>ThemVaoGioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinTaiKhoan.aspx.cs">
+      <DependentUpon>ThongTinTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongTinTaiKhoan.aspx.designer.cs">
+      <DependentUpon>ThongTinTaiKhoan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tivi.aspx.cs">
       <DependentUpon>Tivi.aspx</DependentUpon>

@@ -11,6 +11,15 @@ html {
 
 /* Common */
 
+#userInfor:hover {
+    color: red;
+}
+
+#userInfor {
+    font-size: 15px;
+    color: #fff;
+}
+
 
 .clear {
     clear: both;

@@ -11,10 +11,10 @@ namespace SieuThiDienMay
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((string)Session["user"] != null)
+            if ((string)Session["user_name"] != null)
             {
                 string idsp = Request.QueryString["id"];
-                string user = (string)Session["user"];
+                string user = (string)Session["user_name"];
 
                 // Ghi nhớ trang trước đó
                 string previousPage = Request.UrlReferrer != null ? Request.UrlReferrer.AbsoluteUri : "Index.aspx";

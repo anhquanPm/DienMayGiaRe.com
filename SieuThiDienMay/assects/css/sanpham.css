@@ -11,6 +11,10 @@ html {
 
 /* Common */
 
+#userInfor:hover {
+    color: red;
+}
+
 
 .clear {
     clear: both;

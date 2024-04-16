@@ -36,7 +36,7 @@
                               <i class="ti-shift-right"></i>
                              </a></li>
                         </ul>
-                         <span id="userInfor" runat="server"></span>
+                         <a href="ThongTinTaiKhoan.aspx" style="text-decoration:none"> <span id="userInfor" runat="server"></span></a>
                         <div class="form-search">
                             <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?"
                                 autocomplete="off">
@@ -94,11 +94,10 @@
                                                         </a>
                                                     </div>
                                                     <div class="btn-cart-area">
-                                                        <button class="btn-cart">
-                                                            Thêm vào giỏ hàng
-                                                             <i class="ti-shopping-cart"></i>
-                                                        </button>
-                                                    </div>
+                                                    <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>" style="text-decoration:none">
+                                                         <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
+                                                     </a>
+                                             </div>
                                                 </div>
                                                   </a>
                                             </div>

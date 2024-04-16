@@ -19,6 +19,7 @@ namespace SieuThiDienMay
                 string passWord = Request.Form.Get("password");
 
                 int dem = 0;
+                int fail = 0;
                 if (userName != "" && passWord != "")
                 {
                     listUser = (List<User>)Application["listUser"];
@@ -31,6 +32,7 @@ namespace SieuThiDienMay
                             if (passWord == u.PassWord)
                             {
                                 Session["user"] = u.Name;
+                                Session["user_name"] = u.UserName;
                                 //Thread.Sleep(5000);
                                 Response.Redirect("Index.aspx");
                                 Response.Write("<script>alert('Đăng nhập thành công!')</script>");
@@ -40,6 +42,7 @@ namespace SieuThiDienMay
                             {
                                 //Response.Write("<script>alert('Sai mật khẩu')</script>");
                                 errorLogin.InnerHtml = "Sai mật khẩu";
+                                fail++;
                                 break;
                             }
                         }

@@ -1,20 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TuLanh.aspx.cs" Inherits="SieuThiDienMay.TuLanh" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ThongTinTaiKhoan.aspx.cs" Inherits="SieuThiDienMay.ThongTinTaiKhoan" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Điện máy giá rẻ - Tủ lạnh</title>
-    <link rel="stylesheet" href="   assects/css/sanpham.css"/>
-    <link rel="stylesheet" href="   assects/css/grid.css"/>
-    <link rel="stylesheet" href="   assects/css/responsive.css"/>
-    <link rel="stylesheet" href="   assects/font/themify-icons/themify-icons.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Đăng kí tài khoản</title>
+    <link rel="stylesheet" href="assects/css/dangki.css" />
+    <link rel="stylesheet" href="assects/css/grid.css" />
+    <link rel="stylesheet" href="assects/css/responsive.css" />
+    <link rel="stylesheet" href="assects/font/themify-icons/themify-icons.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div id="main">
+    <div id="main">
         <div id="header">
 
             <div class="grid wide">
@@ -22,26 +20,10 @@
                     <div class="col l-12 m-12 c-12">
                         <ul id="nav">
                             <li><a href="Index.aspx">
-                                    <i class="ti-home"></i>
-                                    Trang chủ
-                                </a></li>
-                            <li><a href="Tivi.aspx">Tivi</a></li>
-                            <li style="background-color:#fff"><a href="TuLanh.aspx" style="color:#000">Tủ lạnh</a></li>
-                            <li><a href="MayGiat.aspx">Máy giặt</a></li>   
-                            <li id="dangNhap" runat="server"><a href="DangNhap.aspx">Tài khoản
-                                <i class="ti-user"></i>
-                             </a>
-                             </li>  
-                             <li id="dangXuat" runat="server" style="display: none"><a href="DangXuat.aspx">Đăng xuất
-                              <i class="ti-shift-right"></i>
-                             </a></li>
+                                <i class="ti-home"></i>
+                                Trang chủ
+                            </a></li>
                         </ul>
-                         <a href="ThongTinTaiKhoan.aspx" style="text-decoration:none"> <span id="userInfor" runat="server"></span></a>
-                        <div class="form-search">
-                            <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?"
-                                autocomplete="off">
-                        </div>
-
                         <div class="search-btn">
                              <a href="GioHang.aspx"> <i class="search-icon ti-shopping-cart"></i></a>
                         </div>
@@ -56,60 +38,39 @@
         </div>
 
         <div id="content">
-            <!-- Begin Slider -->
             <div class="grid wide">
                 <div class="row">
                     <div class="col l-12 m-12 c-12">
-                        <div class="slider">
-                            <img src="assects/img/siler.png" alt="">
+                        <form class="form-register" id="form1" runat="server" action="ThongTinTaiKhoan.aspx" method="post">
+                            <h3>Thông tin tài khoản</h3>
+                            <span class="message-login" style="color: red;" runat="server" id="errorLogin"></span>
+                            <div class="col l-12 m-12 c-12">
+                                <label for="fullname">Tên đầy đủ</label>
+                                <input type="text" id="fullname" class="full-name" autocomplete="off" runat="server" />
+                                <%--<input type="text" name="fullname" required id="fullname" placeholder="Họ và tên" class="full-name" autocomplete="off"/>--%>
+                            </div>
+                             <div class="col l-12 m-12 c-12">
+                                  <label for="username">Tên tài khoản</label>
+                             <input type="text" name="username" required id="username"  runat="server" class="user-name" autocomplete="off" disabled>
+                         </div>
+                            <div class="col l-12 m-12 c-12">
+                                 <label for="password">Mật khẩu</label>
+                                <input type="text" name="password" required id="password"  runat="server" class="password" autocomplete="off">
+                            </div>
+
+                            <div class="col l-12 m-12 c-12">
+                                 <label for="password">Nhập lại mật khẩu</label>
+                            <input type="text" name="repassword" required id="repassword"  runat="server" class="password" autocomplete="off">
                         </div>
+
+                            <div class="col l-12 m-12 c-12">
+                              <asp:Button ID="btnCapNhat" class="btn-register" runat="server" Text="Cập nhật thông tin" OnClick="btnCapNhat_Click" />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- End Slider -->
-
-            <div class="grid wide">
-                <div class="row">
-                     <div class="list-item" id="tivi">
-                            <div class="row">
-
-                                <div class="heading-sub">
-                                    Danh sách sản phẩm tủ lạnh
-                                </div>
-
-                                <asp:ListView ID="dsSP" runat="server">
-                                    <ItemTemplate>
-                                        <div class="col l-3 m-6 c-12">
-                                            <div class="item">
-                                                <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
-                                                <div class="image-item">
-                                                    <img src='<%# Eval("url") %>' alt="">
-                                                </div>
-                                                <div class="body-item">
-                                                    <h3 class="name-item"><%# Eval("tenSP") %></h3>
-                                                    <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                       <div class="btn-mua_ngay-area">
-                                                        <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
-                                                            <input type="button" class="btn-mua_ngay" value="Mua ngay">
-                                                        </a>
-                                                    </div>
-                                                    <div class="btn-cart-area">
-                                                    <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>" style="text-decoration:none">
-                                                         <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
-                                                     </a>
-                                             </div>
-                                                </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:ListView>
-                            </div>
-                        </div>
-                </div>
-            </div>
-
-                
+        </div>
 
         <div id="footer">
             <div class="grid wide">
@@ -176,8 +137,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    </form>
+        </div>
         <script>
         var header = document.getElementById('header')
         var mobileMenu = document.getElementById('mobile-menu')
@@ -206,6 +166,5 @@
             }
         }
 
-        </script>
-</body>
+        </script>body>
 </html>

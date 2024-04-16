@@ -37,9 +37,11 @@
                                 </a></li>
                             </ul>
 
-                            <span id="userInfor" runat="server"></span>
+                            <a href="ThongTinTaiKhoan.aspx" style="text-decoration:none"> <span id="userInfor" runat="server"></span></a>
 
                             <div class="form-search">
+                                <%--<asp:TextBox ID="content_search" class="content-search" type="text" placeholder="Tìm kiếm ?" autocomplete="off" runat="server"  OnTextChanged="content_search_TextChanged" AutoPostBack="true"> </asp:TextBox>--%>
+
                                 <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?" autocomplete="off">
                             </div>
 

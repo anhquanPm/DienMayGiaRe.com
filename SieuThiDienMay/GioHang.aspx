@@ -75,7 +75,7 @@ td {
                               <i class="ti-shift-right"></i>
                              </a></li>
                         </ul>
-                         <span id="userInfor" runat="server" style="color:#fff; font-size: 15px"></span>
+                        <a href="ThongTinTaiKhoan.aspx" style="text-decoration:none"> <span id="userInfor" runat="server"></span></a>
                         <div class="form-search">
                             <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?"
                                 autocomplete="off">

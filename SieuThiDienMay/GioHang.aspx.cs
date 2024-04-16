@@ -16,7 +16,7 @@ namespace SieuThiDienMay
         {
             gioHang = (List<UserProducts>)Application["gioHang"];
 
-            if ((string)Session["user"] != null)
+            if ((string)Session["user_name"] != null)
             {
                 dangNhap.Style.Add("display", "none");
                 userInfor.InnerHtml = "Xin chào : " + (string)Session["user"];
@@ -30,7 +30,7 @@ namespace SieuThiDienMay
                     emtyCart3.Style.Add("display", "none");
                 }
 
-                user = (string)Session["user"];
+                user = (string)Session["user_name"];
 
                 string html = "";
                 html += "<table class='table-giohang'>"
