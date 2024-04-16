@@ -40,7 +40,7 @@ namespace SieuThiDienMay
                          + "<th class='th4'>Thành tiền</th>"
                          + "<th class='th5'></th></tr>";
                 decimal sum = 0;
-                double sl = 0;
+                double sl = 0; 
                 for (int i = 0; i < gioHang.Count; i++)
                 {
                     if (gioHang[i].UserName == user)

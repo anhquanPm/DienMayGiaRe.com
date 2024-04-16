@@ -128,6 +128,34 @@
                 </div>
             </div>
         </div>
+            <script>
+        var header = document.getElementById('header')
+        var mobileMenu = document.getElementById('mobile-menu')
 
+        var headerHight = header.clientHeight
+
+        mobileMenu.onclick = function () {
+            var isClose = header.clientHeight === headerHight
+
+            if (isClose) {
+                header.style.height = 'auto'
+
+            } else {
+                header.style.height = '46px'
+            }
+        }
+
+        // tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i]
+
+            menuItem.onclick = function () {
+                header.style.height = '46px'
+            }
+        }
+
+            </script>
 </body>
 </html>

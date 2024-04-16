@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
+using System.Text.RegularExpressions;
 
 namespace SieuThiDienMay
 {
@@ -21,8 +22,6 @@ namespace SieuThiDienMay
                 string password = Request.Form.Get("password").Trim();
                 string repassword = Request.Form.Get("repassword").Trim();
 
-
-                
                 bool check = true;
                 if (fullName != "" && username != "" && password != "" && repassword != "")
                 {
@@ -32,12 +31,17 @@ namespace SieuThiDienMay
                         {
                             errorLogin.InnerHtml = "Tên tài khoản đã tồn tại! Vui lòng nhập tài khoản khác khác.";
                             check = false;
+                            break;
                         }
                     }
 
                     if (password != repassword)
                     {
                         errorLogin.InnerHtml = "Mật khẩu không trùng khớp";
+                    }
+                    else if (password.Length < 8 || !Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$"))
+                    {
+                        errorLogin.InnerHtml = "Mật khẩu cần ít nhất 8 kí tự, bao gồm ít nhất 1 chữ hoa, 1 số và 1 kí tự đặc biệt.";
                     }
                     else
                     {
