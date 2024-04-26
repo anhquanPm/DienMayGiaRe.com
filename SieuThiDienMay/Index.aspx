@@ -40,9 +40,9 @@
                             <a href="ThongTinTaiKhoan.aspx" style="text-decoration:none"> <span id="userInfor" runat="server"></span></a>
 
                             <div class="form-search">
-                                <%--<asp:TextBox ID="content_search" class="content-search" type="text" placeholder="Tìm kiếm ?" autocomplete="off" runat="server"  OnTextChanged="content_search_TextChanged" AutoPostBack="true"> </asp:TextBox>--%>
+                                <asp:TextBox ID="content_search" class="content-search" type="text" placeholder="Tìm kiếm ?" autocomplete="off" runat="server"  OnTextChanged="content_search_TextChanged" AutoPostBack="true"> </asp:TextBox>
 
-                                <input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?" autocomplete="off">
+                                <%--<input id="content-search" class="content-search" type="text" placeholder="Tìm kiếm ?" autocomplete="off">--%>
                             </div>
 
                             <div class="search-btn">
@@ -76,65 +76,69 @@
             <div class="grid wide">
                 <div class="row">
 
+                    <div class="row"  style="display:block">
+                         <%-- Sản phẩm tivi --%>
+                         <div class="list-item" id="tivi">
+                             <div class="row">
 
-                    <%-- Sản phẩm tivi --%>
-                    <div class="list-item" id="tivi">
-                        <div class="row">
+                                 <div class="heading-sub">
+                                    <%-- Tivi siêu nét--%>
+                                 </div>
 
-                            <div class="heading-sub">
-                                Tivi siêu nét
-                            </div>
+                                 <asp:ListView ID="dsTivi" runat="server">
+                                     <ItemTemplate>
+                                         <div class="col l-2-4 m-6 c-12">
+                                             <div class="item">
+                                                 <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
+                                                     <div class="image-item">
+                                                         <img src='<%# Eval("url") %>' alt="">
+                                                     </div>
+                                                     <div class="body-item">
+                                                         <h3 class="name-item"><%# Eval("tenSP") %></h3>
+                                                         <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
+                                                         <div class="btn-mua_ngay-area">
+                                                             <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
+                                                                 <input type="button" class="btn-mua_ngay" value="Mua ngay">
+                                                             </a>
+                                                         </div>
+                                                         <div class="btn-cart-area">
+                                                             <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>" style="text-decoration:none">
+                                                              <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
+                                                          </a>
+                                                         </div>
+                                                     </div>
+                                                 </a>
+                                             </div>
+                                         </div>
+                                     </ItemTemplate>
+                                 </asp:ListView>
+                                 <div class="col l-12 m-12 c-12">
+                                     <div class="all">
+                                         <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
+                                         <a href="Tivi.aspx" id="btn_all_1" class="btn-all" runat="server">Xem tất cả
+                                         </a>
+                                     </div>
+                                 </div>
 
-                            <asp:ListView ID="dsTivi" runat="server">
-                                <ItemTemplate>
-                                    <div class="col l-3 m-6 c-12">
-                                        <div class="item">
-                                            <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
-                                                <div class="image-item">
-                                                    <img src='<%# Eval("url") %>' alt="">
-                                                </div>
-                                                <div class="body-item">
-                                                    <h3 class="name-item"><%# Eval("tenSP") %></h3>
-                                                    <h3 class="price-item"><%# Eval("giaSP","{0:0,00}") %> VNĐ</h3>
-                                                    <div class="btn-mua_ngay-area">
-                                                        <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
-                                                            <input type="button" class="btn-mua_ngay" value="Mua ngay">
-                                                        </a>
-                                                    </div>
-                                                    <div class="btn-cart-area">
-                                                        <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>" style="text-decoration:none">
-                                                         <input type="button" class="btn-cart" value="Thêm vào giỏ hàng">
-                                                     </a>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </ItemTemplate>
-                            </asp:ListView>
-                            <div class="col l-12 m-12 c-12">
-                                <div class="all">
-                                    <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
-                                    <a href="Tivi.aspx" id="btn-all">Xem tất cả
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
+                             </div>
+                         </div>
                     </div>
+                   
+                   
 
 
-
+                   
                     <%-- Sản phẩm tủ lạnh--%>
                     <div class="list-item" id="tulanh">
                         <div class="row">
+                            
                             <div class="heading-sub">
-                                Tủ lạnh khồng lồ
+                               <%-- Tủ lạnh khồng lồ--%>
                             </div>
 
                             <asp:ListView ID="dsTuLanh" runat="server">
                                 <ItemTemplate>
-                                    <div class="col l-3 m-6 c-12">
+                                    <div class="col l-2-4 m-6 c-12">
                                         <div class="item">
                                             <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
                                                 <div class="image-item">
@@ -162,23 +166,26 @@
                             <div class="col l-12 m-12 c-12">
                                 <div class="all">
                                     <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
-                                    <a href="TuLanh.aspx" id="btn-all">Xem tất cả
+                                    <a href="TuLanh.aspx" id="btn_all_2" class="btn-all" runat="server">Xem tất cả
                                     </a>
                                 </div>
                             </div>
                         </div>
+                             </div>
                     </div>
 
+                    <div class="row"  style="display:block">
                     <%-- Sản phẩm máy giặt--%>
                     <div class="list-item" id="maygiat">
                         <div class="row">
+                              
                             <div class="heading-sub">
-                                Máy giặt thế hệ mới
+                               <%-- Máy giặt thế hệ mới--%>
                             </div>
 
                             <asp:ListView ID="dsMayGiat" runat="server">
                                 <ItemTemplate>
-                                    <div class="col l-3 m-6 c-12">
+                                    <div class="col l-2-4 m-6 c-12">
                                         <div class="item">
                                             <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
                                                 <div class="image-item">
@@ -206,13 +213,14 @@
                             <div class="col l-12 m-12 c-12">
                                 <div class="all">
                                     <!-- Sử dụng thẻ a để tạo liên kết đến trang "SanPham.aspx" -->
-                                    <a href="MayGiat.aspx" id="btn-all">Xem tất cả
+                                    <a href="MayGiat.aspx" id="btn_all_3" class="btn-all" runat="server">Xem tất cả
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                 </div>
             </div>
 
             <div id="footer">

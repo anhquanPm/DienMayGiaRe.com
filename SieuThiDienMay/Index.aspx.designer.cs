@@ -51,6 +51,15 @@ namespace SieuThiDienMay
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl userInfor;
 
         /// <summary>
+        /// content_search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox content_search;
+
+        /// <summary>
         /// dsTivi control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace SieuThiDienMay
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView dsTivi;
+
+        /// <summary>
+        /// btn_all_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btn_all_1;
 
         /// <summary>
         /// dsTuLanh control.
@@ -69,6 +87,15 @@ namespace SieuThiDienMay
         protected global::System.Web.UI.WebControls.ListView dsTuLanh;
 
         /// <summary>
+        /// btn_all_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btn_all_2;
+
+        /// <summary>
         /// dsMayGiat control.
         /// </summary>
         /// <remarks>
@@ -76,5 +103,14 @@ namespace SieuThiDienMay
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView dsMayGiat;
+
+        /// <summary>
+        /// btn_all_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btn_all_3;
     }
 }

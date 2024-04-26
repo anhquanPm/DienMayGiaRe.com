@@ -33,9 +33,14 @@ namespace SieuThiDienMay
                             {
                                 Session["user"] = u.Name;
                                 Session["user_name"] = u.UserName;
+
+                                string activeUsers = (string)Application["ActiveUsers"];
+                                activeUsers += (activeUsers == "") ? u.UserName : ("," + u.UserName);
+                                Application["ActiveUsers"] = activeUsers;
+
                                 //Thread.Sleep(5000);
                                 Response.Redirect("Index.aspx");
-                                Response.Write("<script>alert('Đăng nhập thành công!')</script>");
+                                
                                 break;
                             }
                             else

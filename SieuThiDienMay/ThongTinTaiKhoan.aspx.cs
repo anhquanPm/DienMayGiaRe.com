@@ -14,6 +14,14 @@ namespace SieuThiDienMay
         protected void Page_Load(object sender, EventArgs e)
         {
             listUser = (List<User>)Application["listUser"];
+
+          
+            if (Session["user"] != null)
+            {
+                DisplayActiveUsers();
+
+            }
+
             if (!IsPostBack) // Kiểm tra nếu không phải là postback để tránh gán lại dữ liệu khi postback
             {
                 string user = (string)Session["user"];
@@ -29,6 +37,7 @@ namespace SieuThiDienMay
                             repassword.Value = u.PassWord;
                         }
                     }
+                    
                 }
                 else
                 {
@@ -37,6 +46,32 @@ namespace SieuThiDienMay
 
                 
                 
+            }
+        }
+
+        protected void DisplayActiveUsers()
+        {
+            string activeUsers = (string)Application["ActiveUsers"];
+            if (!string.IsNullOrEmpty(activeUsers))
+            {
+                string[] users = activeUsers.Split(',');
+                Response.Write("<br /><br /><br /><br />Danh sách người dùng đang đăng nhập:");
+                Response.Write("<ul>");
+
+                // Kết hợp tất cả người dùng thành một chuỗi
+                string usersHtml = "";
+                foreach (string user in users)
+                {
+                    usersHtml += "<img src='/assects/img/icons8-online-48.png' alt='User icon' style='height: 20px; width: 20px; vertical-align: middle; margin-right: 5px;' />" + user.Trim() + ", ";
+                }
+
+                // Loại bỏ dấu phẩy cuối cùng
+                usersHtml = usersHtml.TrimEnd(',', ' ');
+
+                // Hiển thị chuỗi người dùng trong một thẻ <li>
+                Response.Write("<li>" + usersHtml + "</li>");
+
+                Response.Write("</ul>");
             }
         }
 

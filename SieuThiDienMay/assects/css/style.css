@@ -188,7 +188,7 @@ html {
 
 .list-item {
     margin-top: 32px;
-    background-color: #0066b2;
+    /*background-color: #0066b2;*/
     padding: 10px;
     border-radius: 10px;
 }
@@ -253,7 +253,7 @@ html {
     padding: 10px;
 }
 
-#btn-all {
+.btn-all {
     font-size: 15px;
     background-color: #fff;
     border-radius: 4px;
@@ -268,7 +268,7 @@ html {
     height: 48px;
 }
 
-#btn-all:hover,
+.btn-all:hover,
 .btn-cart:hover {
     background-color: #000;
     border-radius: 4px;
