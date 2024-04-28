@@ -53,6 +53,10 @@
                                   <label for="username">Tên tài khoản</label>
                              <input type="text" name="username" required id="username"  runat="server" class="user-name" autocomplete="off" disabled>
                          </div>
+                                <div class="col l-12 m-12 c-12">
+                                     <label for="username">Tuổi</label>
+                                <input type="number" name="year" required id="year"  runat="server" class="user-name" autocomplete="off" disabled>
+                            </div>
                             <div class="col l-12 m-12 c-12">
                                  <label for="password">Mật khẩu</label>
                                 <input type="text" name="password" required id="password"  runat="server" class="password" autocomplete="off">

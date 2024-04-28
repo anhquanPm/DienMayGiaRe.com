@@ -51,6 +51,9 @@
                              <div class="col l-12 m-12 c-12">
                              <input type="text" name="username" required id="username" placeholder="Tài khoản" class="user-name" autocomplete="off">
                          </div>
+                                <div class="col l-12 m-12 c-12">
+                                <input type="number" name="year" required id="year" placeholder="Năm sinh" class="user-name" autocomplete="off">
+                            </div>
                             <div class="col l-12 m-12 c-12">
                                 <input type="password" name="password" required id="password" placeholder="Mật khẩu" class="password" autocomplete="off">
                             </div>

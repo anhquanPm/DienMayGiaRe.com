@@ -14,8 +14,8 @@ namespace SieuThiDienMay
         {
             List<User> listUser = new List<User>();
            
-            listUser.Add(new User( "Trần Anh Quân" ,"quan", "quan"));
-            listUser.Add(new User( "Trần Ánh Dương", "duong", "duong"));
+            listUser.Add(new User( "Trần Anh Quân" ,"quan", "quan", 2000));
+            listUser.Add(new User( "Trần Ánh Dương", "duong", "duong", 2001));
 
             Application["listUser"] = listUser;
 
@@ -48,7 +48,7 @@ namespace SieuThiDienMay
 
             List<UserProducts> gioHang = new List<UserProducts>();
             Application["giohang"] = gioHang;
-            Application["ActiveUsers"] = ""; // Khởi tạo biến ActiveUsers là một xâu rỗng
+            Application["ActiveUsers"] = "";
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace SieuThiDienMay
 
         protected void Session_End(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Application_End(object sender, EventArgs e)

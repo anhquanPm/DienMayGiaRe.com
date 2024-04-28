@@ -33,6 +33,7 @@ namespace SieuThiDienMay
                         {
                             fullname.Value = u.Name;
                             username.Value = u.UserName;
+                            year.Value = (DateTime.Now.Year - u.NamSinh).ToString();
                             password.Value = u.PassWord;
                             repassword.Value = u.PassWord;
                         }
@@ -55,6 +56,8 @@ namespace SieuThiDienMay
             if (!string.IsNullOrEmpty(activeUsers))
             {
                 string[] users = activeUsers.Split(',');
+                int numberOfUsers = users.Length; // Đếm số lượng người dùng
+
                 Response.Write("<br /><br /><br /><br />Danh sách người dùng đang đăng nhập:");
                 Response.Write("<ul>");
 
@@ -72,8 +75,16 @@ namespace SieuThiDienMay
                 Response.Write("<li>" + usersHtml + "</li>");
 
                 Response.Write("</ul>");
+
+                // Hiển thị số lượng người dùng đang trực tuyến
+                Response.Write("<br />Số người dùng đang trực tuyến: " + numberOfUsers);
+            }
+            else
+            {
+                Response.Write("Không có người dùng nào đang trực tuyến.");
             }
         }
+
 
 
         protected void btnCapNhat_Click(object sender, EventArgs e)

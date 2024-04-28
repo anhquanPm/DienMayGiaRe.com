@@ -18,9 +18,11 @@ namespace SieuThiDienMay
             if (IsPostBack)
             {
                 string fullName = Request.Form.Get("fullname").Trim();
+                int year = Convert.ToInt32(Request.Form.Get("year").Trim());
                 string username = Request.Form.Get("username").Trim();
                 string password = Request.Form.Get("password").Trim();
                 string repassword = Request.Form.Get("repassword").Trim();
+
 
                 bool check = true;
                 if (fullName != "" && username != "" && password != "" && repassword != "")
@@ -48,7 +50,7 @@ namespace SieuThiDienMay
                         if (check)
                         {
                             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Đăng kí tài khoản thành công!!!'); window.location.href = 'DangNhap.aspx';", true);
-                            User newUser = new User(fullName, username, password);
+                            User newUser = new User(fullName, username, password, year);
                             listUser.Add(newUser);
                             Application["listUser"] = listUser;
                         }
