@@ -5,7 +5,7 @@
 <head runat="server">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Đăng kí tài khoản</title>
+   <title>Thông tin tài khoản</title>
     <link rel="stylesheet" href="assects/css/dangki.css" />
     <link rel="stylesheet" href="assects/css/grid.css" />
     <link rel="stylesheet" href="assects/css/responsive.css" />

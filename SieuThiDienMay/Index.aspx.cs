@@ -50,6 +50,7 @@ namespace SieuThiDienMay
             dsTuLanh.DataBind();
             dsMayGiat.DataSource = maygiat;
             dsMayGiat.DataBind();
+
         }
 
         protected void content_search_TextChanged(object sender, EventArgs e)

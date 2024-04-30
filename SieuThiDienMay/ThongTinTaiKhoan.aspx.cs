@@ -77,7 +77,15 @@ namespace SieuThiDienMay
                 Response.Write("</ul>");
 
                 // Hiển thị số lượng người dùng đang trực tuyến
+
+               
                 Response.Write("<br />Số người dùng đang trực tuyến: " + numberOfUsers);
+
+                int countSp = Convert.ToInt32(Application["countSP"]);
+                Response.Write("<br />Số lượng sản phẩm: " + countSp);
+
+                int countAcc = Convert.ToInt32(Application["countAcc"]);
+                Response.Write("<br />Số lượng acccount đã đăng kí: " + countAcc);
             }
             else
             {

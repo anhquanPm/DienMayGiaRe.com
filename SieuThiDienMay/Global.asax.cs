@@ -43,7 +43,8 @@ namespace SieuThiDienMay
             listSanPham.Add(new SanPham(14, "Panasonic 8.2 kg", 6000000, "assects/img/maygiat4.jpg", 3));
             listSanPham.Add(new SanPham(15, "Panasonic 8.2 kg", 6000000, "assects/img/maygiat4.jpg", 3));
 
-
+            Application["countSP"] = listSanPham.Count;
+            Application["countAcc"] = listUser.Count;
             Application["listSanPham"] = listSanPham;
 
             List<UserProducts> gioHang = new List<UserProducts>();

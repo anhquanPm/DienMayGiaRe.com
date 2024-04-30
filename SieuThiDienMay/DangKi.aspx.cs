@@ -52,7 +52,9 @@ namespace SieuThiDienMay
                             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Đăng kí tài khoản thành công!!!'); window.location.href = 'DangNhap.aspx';", true);
                             User newUser = new User(fullName, username, password, year);
                             listUser.Add(newUser);
-                            Application["listUser"] = listUser;
+                            int countAcc = listUser.Count;
+                            Application["countAcc"] = countAcc;
+                            Application["listUser"] = listUser; 
                         }
                     }
                 }
