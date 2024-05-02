@@ -34,6 +34,7 @@ namespace SieuThiDienMay
 
                 dsSP.DataSource = tivi;
                 dsSP.DataBind();
+                Application["lastURL"] = "Tivi.aspx";
             }
         }
     }

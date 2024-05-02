@@ -93,12 +93,14 @@
                                                         </ul>
                                                     </div>
 
+                                                    
+
                                                 </div>
                                             </div>
 
                                             <div class="footer-content">
                                                 <div class="row">
-                                                    <div class="col l-6 m-6 c-12">
+                                                    <div class="col l-4 m-6 c-12">
                                                             <div class="btn-mua_ngay-area">
                                                             <a href="MuaNgay.aspx?id=<%#Eval("id") %>">
                                                                 <input type="button" class="btn-mua_ngay" value="Mua ngay">
@@ -106,7 +108,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col l-6 m-6 c-12">
+                                                    <div class="col l-4 m-6 c-12">
                                                         <div class="btn-cart-area">
                                                             
                                                                 <a href="ThemVaoGioHang.aspx?id=<%#Eval("id") %>">
@@ -114,6 +116,17 @@
                                                                 </a>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col l-4 m-6 c-12">
+                                                <div class="btn-cart-area">
+                                                    <%--<a href='<%# "Delete.aspx?id=" + Eval("id") %>'>--%>
+                                                        <a href="Delete.aspx?id=<%# Eval("id") %>">
+                                                        <input type="button" class="btn-cart" value="Xóa sản phẩm">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+
                                                 </div>
                                             </div>
                                         </div>

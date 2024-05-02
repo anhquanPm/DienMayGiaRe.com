@@ -50,7 +50,7 @@ namespace SieuThiDienMay
                         if (check)
                         {
                             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Đăng kí tài khoản thành công!!!'); window.location.href = 'DangNhap.aspx';", true);
-                            User newUser = new User(fullName, username, password, year);
+                            User newUser = new User(fullName, username, password, year, "user");
                             listUser.Add(newUser);
                             int countAcc = listUser.Count;
                             Application["countAcc"] = countAcc;

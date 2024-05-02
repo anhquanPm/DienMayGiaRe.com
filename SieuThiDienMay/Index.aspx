@@ -87,7 +87,7 @@
 
                                  <asp:ListView ID="dsTivi" runat="server">
                                      <ItemTemplate>
-                                         <div class="col l-3 m-6 c-12">
+                                         <div class="col l-3 m-4 c-6">
                                              <div class="item">
                                                  <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
                                                      <div class="image-item">
@@ -138,7 +138,7 @@
 
                             <asp:ListView ID="dsTuLanh" runat="server">
                                 <ItemTemplate>
-                                    <div class="col l-3 m-6 c-12">
+                                    <div class="col l-3 m-4 c-6">
                                         <div class="item">
                                             <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
                                                 <div class="image-item">
@@ -185,7 +185,7 @@
 
                             <asp:ListView ID="dsMayGiat" runat="server">
                                 <ItemTemplate>
-                                    <div class="col l-4 m-6 c-12">
+                                    <div class="col l-3 m-4 c-6">
                                         <div class="item">
                                             <a href="ChiTietSanPham.aspx?id=<%# Eval("id") %>" style="text-decoration: none; color: #000">
                                                 <div class="image-item">

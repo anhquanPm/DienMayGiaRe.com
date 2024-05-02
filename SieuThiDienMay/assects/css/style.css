@@ -180,9 +180,19 @@ html {
 .item {
     margin-top: 10px;
     background-color: rgb(255, 255, 255);
-    border: 1px solid #ff6600;
-    border-radius: 10px;
+/*    border: 1px solid #ff6600;
+    border-radius: 10px;*/
 }
+
+    .item:hover {
+        margin-top: 10px;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 1px solid #ff6600;
+        border-right: 1px solid #ff6600;
+        border-radius: 10px;
+    }
+
+
 
 
 

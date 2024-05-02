@@ -33,6 +33,8 @@ namespace SieuThiDienMay
 
                 dsSP.DataSource = tulanh;
                 dsSP.DataBind();
+
+                Application["lastURL"] = "TuLanh.aspx";
             }
         }
     }

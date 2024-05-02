@@ -111,38 +111,6 @@ td {
                 </div>
                 <div class="col l-12 m-12 c-12" id="emtyCart2" runat="server">
                     <div class="table-cart-list" id="idProductAdd" runat="server">
-                        <%--<table class="table-giohang">
-                            <tr>
-                               <th class="th1">Sản phẩm</th>
-                               <th class="th2">Đơn giá</th>
-                               <th class="th3">Số lượng</th>
-                               <th class="th4">Thành tiền</th>
-                               <th class="th5"></th>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="div-img-name">
-                                        <div class="div-img-name-img">
-                                            <img src="assects/img/maygiat1.jpg" style="max-width:100px;"/>
-                                        </div>
-                                        <div style="text-align:left;">Máy giặt</div>
-                                    </div>
-                                </td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>
-                                    <button class="tdXoa">Xóa</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td style="font-size:1.6rem; font-weight:bold">Tổng tiền:</td>
-                                <td></td>
-                            </tr>
-                        </table>--%>
                     </div>
                 </div>
                 <div class="giohang-mota" id="emtyCart3" runat="server">

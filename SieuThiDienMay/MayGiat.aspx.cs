@@ -34,6 +34,7 @@ namespace SieuThiDienMay
 
                 dsSP.DataSource = magiat;
                 dsSP.DataBind();
+                Application["lastURL"] = "MayGiat.aspx";
             }
         }
     }

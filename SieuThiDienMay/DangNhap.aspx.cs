@@ -33,12 +33,16 @@ namespace SieuThiDienMay
                             {
                                 Session["user"] = u.Name;
                                 Session["user_name"] = u.UserName;
+                                Session["user_role"] = u.Check;
 
                                 string activeUsers = (string)Application["ActiveUsers"];
                                 activeUsers += (activeUsers == "") ? u.UserName : ("," + u.UserName);
                                 Application["ActiveUsers"] = activeUsers;
 
-                                //Thread.Sleep(5000);
+                                if ((string)Application["lastURL"]!= "")
+                                {
+                                    Response.Redirect((string)Application["lastURL"]);
+                                }
                                 Response.Redirect("Index.aspx");
                                 
                                 break;

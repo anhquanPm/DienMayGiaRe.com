@@ -40,7 +40,6 @@ namespace SieuThiDienMay
                          + "<th class='th4'>Thành tiền</th>"
                          + "<th class='th5'></th></tr>";
                 decimal sum = 0;
-                double sl = 0; 
                 for (int i = 0; i < gioHang.Count; i++)
                 {
                     if (gioHang[i].UserName == user)
@@ -66,6 +65,9 @@ namespace SieuThiDienMay
                          + "<td style = 'font-size:1.6rem; font-weight:bold'> Tổng tiền:</td>"
                          + "<td class='formatCost'>" + sum + "</td> </tr></table>";
                 idProductAdd.InnerHtml = html;
+
+                string lastURL =  "GioHang.aspx";
+                Application["lastURL"] = lastURL;
             }
             else
             {

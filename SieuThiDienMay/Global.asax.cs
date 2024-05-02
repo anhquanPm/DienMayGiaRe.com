@@ -14,8 +14,8 @@ namespace SieuThiDienMay
         {
             List<User> listUser = new List<User>();
            
-            listUser.Add(new User( "Trần Anh Quân" ,"quan", "quan", 2000));
-            listUser.Add(new User( "Trần Ánh Dương", "duong", "duong", 2001));
+            listUser.Add(new User( "Trần Anh Quân" ,"quan", "quan", 2000, "admin"));
+            listUser.Add(new User( "Trần Ánh Dương", "duong", "duong", 2001, "user"));
 
             Application["listUser"] = listUser;
 
@@ -46,6 +46,15 @@ namespace SieuThiDienMay
             Application["countSP"] = listSanPham.Count;
             Application["countAcc"] = listUser.Count;
             Application["listSanPham"] = listSanPham;
+
+            // lưu thông tin trang cuối mà người dùng truy cập
+            
+            Application["lastURL"] = "";
+           
+
+            
+
+
 
             List<UserProducts> gioHang = new List<UserProducts>();
             Application["giohang"] = gioHang;

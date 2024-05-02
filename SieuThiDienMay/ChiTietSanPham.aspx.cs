@@ -44,5 +44,24 @@ namespace SieuThiDienMay
             }
         }
 
+        protected void btnXoaSanPham_Click(object sender, EventArgs e)
+        {
+            // Lấy id của sản phẩm cần xóa từ tham số truyền vào
+            string idParam = Request.QueryString["id"];
+            int id;
+            if (!string.IsNullOrEmpty(idParam) && int.TryParse(idParam, out id))
+            {
+                // Thực hiện xóa sản phẩm ở đây, ví dụ:
+                // ProductService.XoaSanPham(id);
+                // ProductService là một lớp chứa các phương thức xử lý liên quan đến sản phẩm
+
+                // Sau khi xóa thành công, chuyển hướng về trang chính hoặc trang danh sách sản phẩm
+                Response.Redirect("Index.aspx");
+            }
+            else
+            {
+                // Xử lý trường hợp id không hợp lệ
+            }
+        }
     }
 }

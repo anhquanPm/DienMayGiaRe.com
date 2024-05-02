@@ -50,7 +50,7 @@ namespace SieuThiDienMay
             dsTuLanh.DataBind();
             dsMayGiat.DataSource = maygiat;
             dsMayGiat.DataBind();
-
+            Application["lastURL"] = "Index.aspx";
         }
 
         protected void content_search_TextChanged(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace SieuThiDienMay
             dsTuLanh.DataBind();
             dsMayGiat.DataSource = ketQuaTimKiem.Where(sp => sp.Type == 3).ToList();
             dsMayGiat.DataBind();
-            
+           
         }
 
     }
